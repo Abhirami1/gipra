@@ -52,3 +52,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+//gipra project
+
+
+$route['homepage']['GET']='Auth/HomePageController/main';
+$route['registerpage']['GET']='Auth/RegisterController/index';
+$route['registerinsert']['POST']='Auth/RegisterController/insertEmployee';
+
+$route['loginpage']['GET']='Auth/LoginController/index';
+$route['logininsert']['POST']='Auth/LoginController/checklogin';
+$route['logout']['GET']='Auth/LogoutController/logout';
+
+
+$route['userpage']['GET']='UserController/index';
+$route['adminpage']['GET']='AdminController/index';
+
+
+$route['edit/(:any)']='AdminController/edit/$1';
+$route['update/(:any)']='AdminController/update/$1';
+$route['delete/(:any)']='AdminController/delete/$1';
+
